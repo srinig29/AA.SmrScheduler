@@ -1,0 +1,15 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
