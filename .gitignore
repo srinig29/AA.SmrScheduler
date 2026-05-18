@@ -13,3 +13,14 @@ obj/
 # OS/editor
 .DS_Store
 Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/.env.local
+frontend/build/
+frontend/dist/
+
+# Environment
+.env
+.env.*.local
+

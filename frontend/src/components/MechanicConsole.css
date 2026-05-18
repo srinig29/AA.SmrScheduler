@@ -1,0 +1,278 @@
+.mechanic-console {
+  padding: 1rem 0;
+}
+
+.mechanic-console h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.console-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .console-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mechanic-selector {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.mechanic-selector h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.mechanic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mechanic-btn {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mechanic-btn:hover {
+  border-color: #3498db;
+  background-color: #f8f9fa;
+}
+
+.mechanic-btn.active {
+  background-color: #d4edda;
+  border-color: #27ae60;
+  font-weight: 500;
+}
+
+.mechanic-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.mechanic-branch {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-top: 0.25rem;
+}
+
+.appointments-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .appointments-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.appointments-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.appointments-list h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.apt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.apt-list-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.apt-list-item:hover {
+  border-color: #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.apt-list-item.active {
+  background-color: #d6eaf8;
+  border-color: #3498db;
+}
+
+.apt-list-time {
+  font-weight: bold;
+  color: #2c3e50;
+  min-width: 50px;
+}
+
+.apt-list-info {
+  flex: 1;
+}
+
+.apt-list-customer {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.apt-list-ref {
+  font-size: 0.8rem;
+  color: #95a5a6;
+}
+
+.apt-list-status {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.apt-list-status.status-scheduled {
+  background-color: #d6eaf8;
+  color: #185a9d;
+}
+
+.apt-list-status.status-inprogress {
+  background-color: #fef5e7;
+  color: #9a6e06;
+}
+
+.apt-list-status.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.appointment-detail {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.appointment-detail h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.detail-section {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.detail-value {
+  color: #555;
+  text-align: right;
+}
+
+.detail-value.status-scheduled {
+  color: #185a9d;
+  font-weight: 500;
+}
+
+.detail-value.status-inprogress {
+  color: #9a6e06;
+  font-weight: 500;
+}
+
+.detail-value.status-completed {
+  color: #155724;
+  font-weight: 500;
+}
+
+.work-notes-section,
+.status-update-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+}
+
+.work-notes-section h4,
+.status-update-section h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.work-notes-list {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.work-note-item {
+  padding: 0.75rem;
+  background: white;
+  border-radius: 3px;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid #3498db;
+}
+
+.work-note-item:last-child {
+  margin-bottom: 0;
+}
+
+.note-time {
+  font-size: 0.85rem;
+  color: #95a5a6;
+  margin-bottom: 0.25rem;
+}
+
+.note-text {
+  color: #2c3e50;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.empty-notes {
+  text-align: center;
+  color: #95a5a6;
+  padding: 1rem;
+  font-style: italic;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #95a5a6;
+  font-style: italic;
+}

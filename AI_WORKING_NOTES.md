@@ -53,10 +53,32 @@ Source references used:
 
 ### Frontend MVP
 
+**Status**: ✅ COMPLETE (Milestone 5)
+
 - React UI with three simple screens:
-  - Home schedule dashboard (today)
-  - Booking flow
-  - Mechanic console
+  - **Home schedule dashboard (today)**: View today's appointments grouped by mechanic name. Real-time refresh button. Shows customer name, service type, appointment status, reference number per appointment.
+  - **Booking flow**: Two-step form with (1) Service selection + available slots grid showing date/time/mechanic/branch, (2) Customer details confirmation (name, phone, vehicle). Returns reference number on success. Double-booking prevented with 409 conflict handling.
+  - **Mechanic console**: Mechanic dropdown → appointments list (48-hour window) → detail view with customer/vehicle/service info, work notes list, add note form, status transition buttons (Scheduled→InProgress, InProgress→{Completed,NoShow}).
+
+**Implementation details**:
+- Framework: React 18.2 with React Hooks (useState, useEffect)
+- Routing: Simple navbar button navigation (no React Router for MVPsimplicity)
+- API client: Native fetch API, configured to http://localhost:5080/api
+- Styling: Plain CSS with no external UI library (responsive grid/flexbox layout)
+- State: Component-level only (no Redux, Context, or other state management)
+- Error handling: User-friendly error messages for network failures, validation, double-booking
+- Build: Create React App (react-scripts), Node.js/npm
+
+**Wired endpoints**:
+- `GET /reference-data/branches`, `/reference-data/service-types` (reference data)
+- `GET /slots/available` (booking flow step 1)
+- `POST /appointments` (booking flow step 2 - create booking)
+- `GET /appointments/{id}` (mechanic console - appointment detail)
+- `POST /appointments/{id}/work-notes` (mechanic console - add note)
+- `PATCH /appointments/{id}/status` (mechanic console - status update)
+- `GET /mechanics` (mechanic console - mechanic list)
+- `GET /mechanics/{id}/appointments` (mechanic console - mechanic's 48h appointments)
+- `GET /dashboard/today` (home dashboard)
 
 ## Out-of-scope items
 
@@ -101,9 +123,10 @@ Source references used:
 - [x] Add EF initial migration files
 - [x] Apply migration to LocalDB
 - [x] Verify seed data via API (`Branches=2`, `Services=4`, `AvailableSlots=84`)
-- [ ] Scaffold React frontend MVP
-- [ ] Wire React to backend endpoints
-- [ ] Final interview pass (README + known limitations + test checklist)
+- [x] Scaffold React frontend MVP (3 screens: Dashboard, Booking, Mechanic Console)
+- [x] Wire React screens to backend endpoints (all 10+ API calls)
+- [x] Verify end-to-end flows and API connectivity
+- [ ] Final interview pass (clean code, error handling, README finalization)
 
 ## Step-by-step implementation plan
 
@@ -142,3 +165,8 @@ Source references used:
 - 2026-05-18: Added EF migration baseline and applied LocalDB schema successfully.
 - 2026-05-18: Fixed SQL Server multiple cascade path issue by configuring explicit delete behaviors.
 - 2026-05-18: Verified seeded data through API (`Branches=2`, `Services=4`, `AvailableSlots=84`).
+- 2026-05-18: Milestone 5 complete - React MVP frontend scaffolded with three screens:
+  - Dashboard: Today's schedule grouped by mechanic
+  - BookingFlow: Two-step booking form with available slot selection
+  - MechanicConsole: Task management with appointment details, work notes, status updates
+- 2026-05-18: All React components wired to backend API; npm install succeeded; dev server compiled successfully; API endpoints verified (200 responses for branches, slots, mechanics)

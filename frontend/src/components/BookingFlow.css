@@ -1,0 +1,112 @@
+.booking-flow {
+  padding: 1rem 0;
+}
+
+.booking-flow h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-card {
+  background: #d4edda;
+  border-left: 4px solid #27ae60;
+}
+
+.confirmation-card h3 {
+  color: #155724;
+  margin-top: 0;
+}
+
+.confirmation-details {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.confirmation-details p {
+  margin: 0.5rem 0;
+  color: #155724;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.slot-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.slot-card:hover {
+  border-color: #27ae60;
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.2);
+  transform: translateY(-2px);
+}
+
+.slot-date {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.slot-time {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 0.5rem;
+}
+
+.slot-mechanic {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.slot-branch {
+  font-size: 0.85rem;
+  color: #95a5a6;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 4px;
+  color: #95a5a6;
+}
+
+.step-2 {
+  max-width: 500px;
+}
+
+.step-2 h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+.secondary-btn {
+  background-color: #95a5a6;
+}
+
+.secondary-btn:hover {
+  background-color: #7f8c8d;
+}
