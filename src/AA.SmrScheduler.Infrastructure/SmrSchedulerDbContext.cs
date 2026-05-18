@@ -19,6 +19,42 @@ public class SmrSchedulerDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Mechanic>()
+            .HasOne(m => m.Branch)
+            .WithMany()
+            .HasForeignKey(m => m.BranchId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<AppointmentSlot>()
+            .HasOne(s => s.Branch)
+            .WithMany()
+            .HasForeignKey(s => s.BranchId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<AppointmentSlot>()
+            .HasOne(s => s.Mechanic)
+            .WithMany()
+            .HasForeignKey(s => s.MechanicId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<AppointmentSlot>()
+            .HasOne(s => s.ServiceType)
+            .WithMany()
+            .HasForeignKey(s => s.ServiceTypeId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<Appointment>()
+            .HasOne(a => a.AppointmentSlot)
+            .WithOne(s => s.Appointment)
+            .HasForeignKey<Appointment>(a => a.AppointmentSlotId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<WorkNote>()
+            .HasOne(w => w.Appointment)
+            .WithMany(a => a.WorkNotes)
+            .HasForeignKey(w => w.AppointmentId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         modelBuilder.Entity<Appointment>()
             .HasIndex(x => x.ReferenceNumber)
             .IsUnique();

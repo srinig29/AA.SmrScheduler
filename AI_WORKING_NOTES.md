@@ -92,12 +92,25 @@ Source references used:
 - `dotnet build` succeeded
 - Editor diagnostics now show no compile errors
 
+## Milestone checklist (live)
+
+- [x] Fix build/package/reference issues
+- [x] Retarget backend projects to .NET 8
+- [x] Implement backend Phase 1 API endpoints
+- [x] Add startup slot seeding logic
+- [x] Add EF initial migration files
+- [x] Apply migration to LocalDB
+- [x] Verify seed data via API (`Branches=2`, `Services=4`, `AvailableSlots=84`)
+- [ ] Scaffold React frontend MVP
+- [ ] Wire React to backend endpoints
+- [ ] Final interview pass (README + known limitations + test checklist)
+
 ## Step-by-step implementation plan
 
 1. Fix build/package/reference issues (completed).
 2. Add planning docs (`AI_WORKING_NOTES.md`) and keep updated (in progress).
-3. Implement backend Phase 1 endpoints and DTOs with simple service layer.
-4. Add/refresh EF migrations and deterministic first-run seed data (including appointment slots for next 7 days).
+3. Implement backend Phase 1 endpoints and DTOs with simple service layer (completed).
+4. Add/refresh EF migrations and deterministic first-run seed data (including appointment slots for next 7 days) (completed).
 5. Scaffold React frontend and wire required MVP flows.
 6. Final polish: validation, conflict handling checks, README finalization.
 
@@ -126,3 +139,6 @@ Source references used:
 - 2026-05-18: Milestone 1 complete (build/package/reference fixes, net8 retarget, clean build).
 - 2026-05-18: Initial `AI_WORKING_NOTES.md` created.
 - 2026-05-18: Added Phase 1 backend foundation endpoints, startup slot seeding, and CORS configuration.
+- 2026-05-18: Added EF migration baseline and applied LocalDB schema successfully.
+- 2026-05-18: Fixed SQL Server multiple cascade path issue by configuring explicit delete behaviors.
+- 2026-05-18: Verified seeded data through API (`Branches=2`, `Services=4`, `AvailableSlots=84`).

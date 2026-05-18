@@ -6,6 +6,8 @@ Interview assignment implementation for a simple Service, Maintenance & Repair b
 
 - Backend solution builds successfully on .NET 8.
 - EF Core and Swagger package/reference issues are fixed.
+- EF migrations are created and applied to LocalDB.
+- Seed data is verified (`Branches=2`, `Services=4`, `AvailableSlots=84`).
 - React frontend is not scaffolded yet.
 
 ## Solution structure
@@ -29,11 +31,25 @@ Interview assignment implementation for a simple Service, Maintenance & Repair b
 
 The API currently applies pending migrations on startup via `Program.cs`.
 
+Manual migration commands:
+
+- `dotnet ef migrations add InitialCreate --project src/AA.SmrScheduler.Infrastructure --startup-project src/AA.SmrScheduler.Api --output-dir Migrations`
+- `dotnet ef database update --project src/AA.SmrScheduler.Infrastructure --startup-project src/AA.SmrScheduler.Api`
+
 ## Database
 
 Connection string is in `src/AA.SmrScheduler.Api/appsettings.json` and targets LocalDB:
 
 - `Server=(localdb)\\MSSQLLocalDB;Database=AASmrSchedulerDb;Trusted_Connection=True;TrustServerCertificate=True`
+
+## Milestone checklist
+
+- [x] Build/package issues fixed
+- [x] .NET 8 alignment complete
+- [x] Backend Phase 1 endpoints implemented
+- [x] EF migration applied to LocalDB
+- [x] Seed data verification complete
+- [ ] React MVP scaffold and wiring
 
 ## Scope guidance
 
