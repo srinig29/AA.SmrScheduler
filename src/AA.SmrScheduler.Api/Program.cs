@@ -5,6 +5,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactClient", policy =>
+    {
+        policy.AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowAnyOrigin();
+    });
+});
+
 builder.Services.AddDbContext<SmrSchedulerDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -16,11 +26,22 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<SmrSchedulerDbContext>();
-    db.Database.Migrate();
+    if (db.Database.GetMigrations().Any())
+    {
+        db.Database.Migrate();
+    }
+    else
+    {
+        db.Database.EnsureCreated();
+    }
+
+    await SmrSchedulerSeedData.SeedSlotsAsync(db);
 }
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+app.UseCors("ReactClient");
 
 app.UseHttpsRedirection();
 
