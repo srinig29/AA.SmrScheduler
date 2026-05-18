@@ -61,15 +61,17 @@ Source references used:
   - **Mechanic console**: Mechanic dropdown → appointments list (48-hour window) → detail view with customer/vehicle/service info, work notes list, add note form, status transition buttons (Scheduled→InProgress, InProgress→{Completed,NoShow}).
 
 **Implementation details**:
+
 - Framework: React 18.2 with React Hooks (useState, useEffect)
 - Routing: Simple navbar button navigation (no React Router for MVPsimplicity)
-- API client: Native fetch API, configured to http://localhost:5080/api
+- API client: Native fetch API, configured to <http://localhost:5080/api>
 - Styling: Plain CSS with no external UI library (responsive grid/flexbox layout)
 - State: Component-level only (no Redux, Context, or other state management)
 - Error handling: User-friendly error messages for network failures, validation, double-booking
 - Build: Create React App (react-scripts), Node.js/npm
 
 **Wired endpoints**:
+
 - `GET /reference-data/branches`, `/reference-data/service-types` (reference data)
 - `GET /slots/available` (booking flow step 1)
 - `POST /appointments` (booking flow step 2 - create booking)

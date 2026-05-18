@@ -5,6 +5,7 @@ React-based MVP frontend for the SMR Appointment Scheduler.
 ## Quick Start
 
 ### Prerequisites
+
 - Node.js 16+ and npm
 
 ### Installation
@@ -67,7 +68,7 @@ src/
 
 ### API Integration
 
-The frontend connects to the backend API (http://localhost:5080/api) with the following endpoints:
+The frontend connects to the backend API (<http://localhost:5080/api>) with the following endpoints:
 
 - `GET /reference-data/branches` - List branches
 - `GET /reference-data/service-types` - List service types
@@ -92,6 +93,7 @@ The frontend connects to the backend API (http://localhost:5080/api) with the fo
 ## Notes
 
 This is a lightweight MVP designed for interview purposes. It demonstrates:
+
 - React component composition
 - API integration and error handling
 - Form validation and state management

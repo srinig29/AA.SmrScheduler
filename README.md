@@ -6,7 +6,7 @@ Interview assignment implementation for a simple Service, Maintenance & Repair b
 
 ✅ **MILESTONE 5 COMPLETE - MVP READY FOR DEMO**
 
-- Backend API (.NET 8) builds successfully and runs on http://localhost:5080
+- Backend API (.NET 8) builds successfully and runs on <http://localhost:5080>
 - EF Core migrations created and applied to LocalDB
 - Seed data verified (Branches=2, Services=4, AvailableSlots=84)
 - React frontend scaffolded with 3 MVP screens
@@ -41,8 +41,8 @@ cd src\AA.SmrScheduler.Api
 dotnet run
 ```
 
-Runs on: http://localhost:5080  
-Swagger: http://localhost:5080/swagger/index.html
+Runs on: <http://localhost:5080>  
+Swagger: <http://localhost:5080/swagger/index.html>
 
 ### Frontend (Terminal 2)
 
@@ -52,7 +52,7 @@ npm install  # (first time only)
 npm start
 ```
 
-Runs on: http://localhost:3000
+Runs on: <http://localhost:3000>
 
 ### Test the MVP
 
@@ -100,6 +100,7 @@ Connection string: `(localdb)\MSSQLLocalDB;Database=AASmrSchedulerDb`
 Located in: `src/AA.SmrScheduler.Api/appsettings.json`
 
 **Seed data** (on first run):
+
 - 2 branches (Dublin, Cork)
 - 4 service types (Inspection 60min, Service 90min, Repair 120min, Diagnostics 60min)
 - 3 mechanics (1-2 per branch)
@@ -130,23 +131,28 @@ frontend/
 ## 🔌 API endpoints
 
 ### Reference Data
+
 - `GET /api/reference-data/branches` - Get all branches
 - `GET /api/reference-data/service-types` - Get all service types
 
 ### Slots
+
 - `GET /api/slots/available?serviceTypeId=<id>` - Get available slots (optional filter)
 
 ### Appointments
+
 - `POST /api/appointments` - Create booking
 - `GET /api/appointments/{id}` - Get appointment detail
 - `POST /api/appointments/{id}/work-notes` - Add work note
 - `PATCH /api/appointments/{id}/status` - Update status
 
 ### Mechanics
+
 - `GET /api/mechanics` - Get all mechanics
 - `GET /api/mechanics/{id}/appointments` - Get mechanic's 48-hour appointments
 
 ### Dashboard
+
 - `GET /api/dashboard/today` - Get today's schedule grouped by mechanic
 
 ## ✅ Milestone checklist
@@ -164,23 +170,27 @@ frontend/
 ## 🎓 Interview talking points
 
 ### Architecture
+
 - **Layered design**: Domain → Infrastructure (EF) → API (Controllers)
 - **Simple and interview-friendly**: No complex patterns (CQRS, MediatR, etc.)
 - **CORS enabled** for React frontend
 
 ### Data model
+
 - **AppointmentSlot**: Composite key (BranchId, MechanicId, ServiceTypeId, StartTime, EndTime)
 - **Appointment**: Unique ReferenceNumber, unique constraint on AppointmentSlotId (prevents double-booking)
 - **WorkNote**: Cascade delete on parent Appointment
 - **Status machine**: Scheduled → InProgress → {Completed, NoShow}
 
 ### Key decisions
+
 1. **Delete behaviors**: Explicit configuration to prevent SQL Server cascade path conflicts
 2. **Idempotent seeding**: Startup checks for existing slots before bulk insert
 3. **Double-booking prevention**: DB unique constraint + API 409 conflict response
 4. **Slot generation**: 7 days ahead, 3 mechanics × 4 service types = 84 slots
 
 ### Frontend
+
 - **No state management library**: React hooks only (useState, useEffect)
 - **No Router**: Simple navbar state toggle between screens (MVP simplicity)
 - **Fetch API**: Direct calls to backend (no axios or wrapper)
@@ -189,6 +199,7 @@ frontend/
 ## 📝 Scope
 
 See `AI_WORKING_NOTES.md` for detailed:
+
 - MVP scope and feature set
 - Out-of-scope items
 - Implementation plan
