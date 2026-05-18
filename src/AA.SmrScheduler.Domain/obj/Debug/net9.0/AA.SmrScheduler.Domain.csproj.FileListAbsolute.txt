@@ -1,0 +1,11 @@
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\bin\Debug\net9.0\AA.SmrScheduler.Domain.deps.json
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\bin\Debug\net9.0\AA.SmrScheduler.Domain.dll
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\bin\Debug\net9.0\AA.SmrScheduler.Domain.pdb
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\obj\Debug\net9.0\AA.SmrScheduler.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\obj\Debug\net9.0\AA.SmrScheduler.Domain.AssemblyInfoInputs.cache
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\obj\Debug\net9.0\AA.SmrScheduler.Domain.AssemblyInfo.cs
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\obj\Debug\net9.0\AA.SmrScheduler.Domain.csproj.CoreCompileInputs.cache
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\obj\Debug\net9.0\AA.SmrScheduler.Domain.dll
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\obj\Debug\net9.0\refint\AA.SmrScheduler.Domain.dll
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\obj\Debug\net9.0\AA.SmrScheduler.Domain.pdb
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Domain\obj\Debug\net9.0\ref\AA.SmrScheduler.Domain.dll

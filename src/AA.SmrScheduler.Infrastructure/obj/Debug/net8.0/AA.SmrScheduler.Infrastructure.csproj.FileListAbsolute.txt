@@ -1,0 +1,17 @@
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\bin\Debug\net8.0\AA.SmrScheduler.Infrastructure.deps.json
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\bin\Debug\net8.0\AA.SmrScheduler.Infrastructure.runtimeconfig.json
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\bin\Debug\net8.0\AA.SmrScheduler.Infrastructure.dll
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\bin\Debug\net8.0\AA.SmrScheduler.Infrastructure.pdb
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\bin\Debug\net8.0\AA.SmrScheduler.Domain.dll
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\bin\Debug\net8.0\AA.SmrScheduler.Domain.pdb
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrScheduler.Infrastructure.csproj.AssemblyReference.cache
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrScheduler.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrScheduler.Infrastructure.AssemblyInfoInputs.cache
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrScheduler.Infrastructure.AssemblyInfo.cs
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrScheduler.Infrastructure.csproj.CoreCompileInputs.cache
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrSc.70BAF4AC.Up2Date
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrScheduler.Infrastructure.dll
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\refint\AA.SmrScheduler.Infrastructure.dll
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrScheduler.Infrastructure.pdb
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\AA.SmrScheduler.Infrastructure.genruntimeconfig.cache
+C:\temp\AA.SmrScheduler\src\AA.SmrScheduler.Infrastructure\obj\Debug\net8.0\ref\AA.SmrScheduler.Infrastructure.dll
